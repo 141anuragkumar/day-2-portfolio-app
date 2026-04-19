@@ -1,7 +1,8 @@
 import React,{ useState, useEffect} from "react";
 
-const NAV = ["My Portfolio"];
-// Work", "About", "Skills", "Contact
+
+const NAV = ["Work", "About", "Skills", "Contact"];
+
 
 
 const PROJECTS = [
@@ -25,16 +26,16 @@ const PROJECTS = [
     color: "#42c8f5",
     link: "https://studenttool1.netlify.app/",
   },
-  // {
-  //   id: "03",
-  //   title: "Attendify",
-  //   subtitle: "Attendance Analytics Dashboard",
-  //   year: "2023",
-  //   tags: ["Node.js", "MongoDB", "Chart.js"],
-  //   desc: "Full-stack dashboard showing attendance trends, subject-wise breakdown, and bunk forecasting. Built for personal use, used by 200+ students.",
-  //   color: "#f542a7",
-  //   link: "#",
-  // },
+  {
+    id: "03",
+    title: "Attendify",
+    subtitle: "Attendance Analytics Dashboard",
+    year: "2023",
+    tags: ["Node.js", "MongoDB", "Chart.js"],
+    desc: "Full-stack dashboard showing attendance trends, subject-wise breakdown, and bunk forecasting. Built for personal use, used by 200+ students.",
+    color: "#f542a7",
+    link: "#",
+  },
   // {
   //   id: "04",
   //   title: "DevDiary",
@@ -82,10 +83,10 @@ function useTypewriter(text, speed = 60, delay = 500) {
       return () => clearInterval(iv);
     }, delay);
     return () => clearTimeout(t);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);
   return displayed;
 }
-
 function Cursor() {
   const [v, setV] = useState(true);
   useEffect(() => {
